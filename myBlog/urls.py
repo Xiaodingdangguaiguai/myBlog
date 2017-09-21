@@ -19,9 +19,10 @@ from django.contrib import admin
 urlpatterns = [
 
     #add your app urls
-    #url(r'^article/', include('article.urls')),
-    url(r'^article/', 'article.views.detail', name = 'detail'),
-    url(r'^article/', 'article.views.home', name = 'home'),
+
+    url(r'^(?P<my_args>\d+)/$', include('article.urls_detail')),
     url(r'^admin/', admin.site.urls),
+    url(r'^$', include('article.urls')),
+    #url(r'^test/$', include('article.urls_test')),
 
 ]

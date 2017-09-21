@@ -4,5 +4,5 @@ from article import views
 
 urlpatterns = [
     url(r'^$', views.home, name = 'home'),
-    url(r'^$', views.detail, name = 'detail'),
+#    url(r'^(?P<my_args>\d+)/$', views.detail, name = 'detail'),
 ]

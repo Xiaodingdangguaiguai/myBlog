@@ -57,10 +57,16 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'myBlog.urls'
 
+#for my TEMPLATES
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+#TEMPLATE_DIRS = (
+#    TEMPLATE_PATH,
+#    )
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_PATH],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,6 +80,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'myBlog.wsgi.application'
+
+
+
 
 
 # Database
